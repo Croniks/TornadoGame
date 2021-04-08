@@ -16,7 +16,7 @@ public class ObjectBuilder : MonoBehaviour
     
     public void BuildObjects()
     {
-        if(_objectList.Count > 0)
+        if (_objectList.Count > 0)
         {
             _objectList.ForEach(obj => DestroyImmediate(obj));
             _objectList.Clear();
