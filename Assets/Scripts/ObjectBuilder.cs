@@ -11,7 +11,7 @@ public class ObjectBuilder : MonoBehaviour
     [SerializeField] private int _quantityObjects = 1;
     [SerializeField] private float _distanceBetweenObjects = 1f;
     private Vector3 _currentPosition;
-    private List<GameObject> _objectList = new List<GameObject>();
+    [SerializeField, HideInInspector] private List<GameObject> _objectList = new List<GameObject>();
     
     
     public void BuildObjects()
@@ -21,7 +21,7 @@ public class ObjectBuilder : MonoBehaviour
             _objectList.ForEach(obj => DestroyImmediate(obj));
             _objectList.Clear();
         }
-
+        
         if(_objectPrefab != null)
         {
             GameObject gameObj;
